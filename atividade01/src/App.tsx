@@ -1,5 +1,5 @@
 import React from 'react';
-import 'App.sass'
+import './App.sass'
 
 function App() {
   // Aqui fica a configuração de pessoas que fazem parte do grupo
