@@ -1,6 +1,5 @@
 import React from 'react';
-import './App.sass'
-
+import './App.sass';
 function App() {
   // Aqui fica a configuração de pessoas que fazem parte do grupo
   const pessoas = [
@@ -11,7 +10,7 @@ function App() {
 
   return (
     <div className='tudo'>
-
+      <img src='assets/img01' alt="lala" />
       {/* Aqui fica o Titulo */}
       <h1 id='titulo'>Integrantes</h1>
 
