@@ -36,8 +36,20 @@ function App() {
             
           ))
         }
-      </div>
+      </div> 
+
+      <h1 id='titulo_tarefa'> Tarefa número 4 </h1>
+      <p id='descricao_tarefa'>Criar uma página para controlar a lista de vídeos do youtube 
+      para estudar: </p>
+      <ul id='listagem'> 
+        <li id='line1'>Consiste no cadastro de um vídeo do youtube (link) e uma descrição;</li> <br />
+        <li id='line2'>Pode ser editado o link do vídeo e a descrição;</li> <br />
+        <li id='line3'>Pode ser excluído.</li>
+      </ul>
       {/* Aqui termina a div com as pessoas (imagem e nome) EM GRUPO */}
+
+
+
     </div>
   );
 }
