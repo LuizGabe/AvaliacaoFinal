@@ -10,7 +10,6 @@ function App() {
 
   return (
     <div className='tudo'>
-      <img src='assets/img01' alt="lala" />
       {/* Aqui fica o Titulo */}
       <h1 id='titulo'>Integrantes</h1>
 
@@ -27,7 +26,7 @@ function App() {
               <img src={n.imgUrl} alt={`${n.nome} imagem`}/>
 
               {/* Aqui fica o nome da pessoa que aparecera para cada pessoa */}
-              <h4>{n.nome}</h4>
+              <h4 className='nome'>{n.nome}</h4>
 
               {/* Aqui termina a div das pessoas INDIVIDUALMENTE */}
             </div>
