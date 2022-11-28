@@ -8,10 +8,12 @@ function App() {
             imgUrl: "https://cdn-icons-png.flaticon.com/512/9058/9058715.png",
         },
         {
+            id:2,
             nome: "Matheus Henrique da Rosa Foliatti",
             imgUrl: "https://cdn-icons-png.flaticon.com/512/9058/9058716.png",
         },
         {
+            id:3,
             nome: "Carlos Sadi Mucha Zomer",
             imgUrl: "https://cdn-icons-png.flaticon.com/512/9058/9058721.png",
         },
@@ -29,7 +31,7 @@ function App() {
                         /* Aqui fica a repetição para mostrar todas as pessoas */
                         pessoas.map((n) => (
                             /* Aqui inicia a div das pessoas INDIVIDUALMENTE */
-                            <div className="pessoa">
+                            <div id="pessoa"  >
                                 {/* Aqui fica a imagem que aparecera para cada pessoa */}
                                 <img src={n.imgUrl} alt={`${n.nome} imagem`} id="foto" />
 
