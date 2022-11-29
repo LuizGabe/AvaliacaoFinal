@@ -13,8 +13,8 @@ export class VideoController {
   @Get()
   getVideos() {}
 
-  @Put('/video/teste')
-  addVideo(@Body() addVideoDto: AddVideoDto) {
+  @Post()
+  addVideo(@Body() addVideoDto) {
     console.log('addVideoDto', addVideoDto)
     return this.videoService.addVideo(addVideoDto);
   }
