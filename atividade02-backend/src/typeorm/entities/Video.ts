@@ -1,19 +1,16 @@
-/* eslint-disable prettier/prettier */
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({ name:'video'} )
+@Entity({ name: 'video' })
 export class Video {
+  @PrimaryGeneratedColumn({ type: 'bigint' })
+  id: number;
 
-    @PrimaryGeneratedColumn({type: 'bigint'})
-    id: number;
-    
-    @Column()
-    name: string;
+  @Column()
+  name: string;
 
-    @Column()
-    url: string;
+  @Column()
+  url: string;
 
-    @Column()
-    id_Category: number;
-
+  @Column()
+  id_Category: number;
 }

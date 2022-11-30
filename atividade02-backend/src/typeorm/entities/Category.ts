@@ -1,12 +1,10 @@
-/* eslint-disable prettier/prettier */
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({ name:'category'} )
+@Entity({ name: 'category' })
 export class Category {
+  @PrimaryGeneratedColumn({ type: 'bigint' })
+  id: number;
 
-    @PrimaryGeneratedColumn({type: 'bigint'})
-    id: number;
-    
-    @Column()
-    name: string;
+  @Column()
+  name: string;
 }
