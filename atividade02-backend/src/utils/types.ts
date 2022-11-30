@@ -1,6 +1,12 @@
 /* eslint-disable prettier/prettier */
-export class AddVideoParams {
-  name:string;
+export type AddVideoParams = {
+  name: string;
   url: string;
   id_Category: number;
 }
+
+export type AddCategoryParams = {
+  id: number;
+  name: string;
+}
+
