@@ -15,7 +15,6 @@ export class VideoController {
 
   @Post()
   addVideo(@Body() addVideoDto) {
-    console.log('addVideoDto', addVideoDto)
     return this.videoService.addVideo(addVideoDto);
   }
 }

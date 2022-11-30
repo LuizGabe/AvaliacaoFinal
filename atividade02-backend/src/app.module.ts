@@ -19,7 +19,7 @@ import { VideoService } from './video/services/video/video.service';
       port: 5432,
       username: 'postgres',
       password: 'senha',
-      database: 'video',
+      database: 'atividade',
       entities: [
         Video // entidades/classes
       ],

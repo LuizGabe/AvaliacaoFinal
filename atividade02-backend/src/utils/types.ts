@@ -2,5 +2,5 @@
 export class AddVideoParams {
   name:string;
   url: string;
-  id_Category: string;
+  id_Category: number;
 }

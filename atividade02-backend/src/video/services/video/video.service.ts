@@ -13,7 +13,6 @@ export class VideoService {
   findVideo() {}
 
   addVideo(videoDetails: AddVideoParams) {
-    console.log('videoDetails', videoDetails)
     const newVideo = this.videoRepository.create({...videoDetails})
     return this.videoRepository.save(newVideo)
   }

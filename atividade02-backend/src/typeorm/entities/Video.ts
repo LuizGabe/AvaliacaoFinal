@@ -7,13 +7,13 @@ export class Video {
     @PrimaryGeneratedColumn({type: 'bigint'})
     id: number;
     
-    @Column({nullable:true})
+    @Column()
     name: string;
 
-    @Column({nullable:true})
+    @Column()
     url: string;
 
-    @Column({nullable:true})
-    id_Category: string;
+    @Column()
+    id_Category: number;
 
 }
