@@ -1,17 +1,17 @@
-/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { VideoController } from './video/controllers/video/video.controller';
-
-import { Video } from './typeorm/entities/video';
-
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Category } from './typeorm/entities/category';
 
+// Video entity, service and controller
+import { Video } from './typeorm/entities/video';
 import { VideoModule } from './video/video.module';
 import { VideoService } from './video/services/video/video.service';
+import { VideoController } from './video/controllers/video/video.controller';
+
+// Category entity, service and controller
+import { Category } from './typeorm/entities/Category';
 import { CategoryModule } from './category/category.module';
+import { CategoryService } from './category/services/category/category.service';
+import { CategoryController } from './category/controllers/category/category.controller';
 
 @Module({
   imports: [
@@ -22,16 +22,14 @@ import { CategoryModule } from './category/category.module';
       username: 'postgres',
       password: 'senha',
       database: 'atividade',
-      entities: [
-        Video, Category // entidades/classes
-      ],
+      entities: [Video, Category],
       synchronize: true,
     }),
-    TypeOrmModule.forFeature([Video]),
+    TypeOrmModule.forFeature([Video, Category]),
     VideoModule,
     CategoryModule,
   ],
-  controllers: [AppController, VideoController],
-  providers: [AppService, VideoService],
+  controllers: [VideoController, CategoryController],
+  providers: [VideoService, CategoryService],
 })
 export class AppModule {}
