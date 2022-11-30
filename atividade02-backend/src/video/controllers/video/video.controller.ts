@@ -1,20 +1,24 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable @typescript-eslint/no-empty-function */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { Body, Controller, Get, Post, Put } from '@nestjs/common';
-import { AddVideoDto } from '../../dtos/AddVideo.dto';
+import { Body, Controller, Get, Post, Param, Delete } from '@nestjs/common';
 import { VideoService } from '../../services/video/video.service';
 
 @Controller('video')
 export class VideoController {
-
   constructor(private videoService: VideoService) {}
 
   @Get()
-  getVideos() {}
+  async getVideos() {
+    return this.videoService.getAll();
+  }
 
-  @Post()
-  addVideo(@Body() addVideoDto) {
-    return this.videoService.addVideo(addVideoDto);
+  @Post('/salvar-editar')
+  async add(@Body() addVideoDto) {
+    await this.videoService.add(addVideoDto);
+    return 'Adicionado com sucesso!';
+  }
+
+  @Delete('/excluir/:id')
+  async excluirVideo(@Param() parametros) {
+    this.videoService.excluir(parametros.id);
+    return `O id ${parametros.id} foi excluido com exito.`;
   }
 }
