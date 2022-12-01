@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './home';
+import Home from './pages/Home';
+import Add from './pages/Add';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Add from './add';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
