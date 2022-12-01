@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+  margin: 0;
+  font-family: "Lato", serif;
+  font-size: 2rem;
+  background-image: url('./assets/vimal-s-LPawq1Y4oys-unsplash.jpg');
+  background-size: cover;
+
+}
+
+h3{
+  color: white;
+  backdrop-filter: blur(10px);
+  width: fit-content;
+}
+
+.btn-primary {
+  background-color: transparent;
+  transition-duration: 0.4s;
+  color: white;
+  outline: 1px solid white;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #4CAF50; 
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.btn-primary:active {
+  background-color: #1b641e; 
+}
+
+.table{
+  width: 100%;
+  border: 1px solid white;
+  color: white;
+  backdrop-filter: blur(20px);
+  margin: 5px;
+  padding: 5px;
+}
+
+.form-control{
+  background-color: white;
+  outline: 2px solid white;
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  margin: 15px;
+}
+
+.form-control::after{
+  background-color: white;
+  color: white;
+  backdrop-filter: blur(10px);
+
+}
+
+.container{
+  color: white;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  margin: 5px;
+  padding: 15px;
+}
