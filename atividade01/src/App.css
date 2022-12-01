@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "LeagueSpartanVariable", serif;
+  font-size: 2rem;
+  background-image: url('./assets/vimal-s-LPawq1Y4oys-unsplash.jpg');
+  background-size: cover;
+}
+img{
+  width: 15rem;
+  height: 15rem;
+}
+
+h1{
+  text-align: center;
+}
+#pessoa{
+  text-align:center;
+  display:block;
+  margin-bottom: 1px;
+  margin-inline: 15px;
+  float:left;
+  background: rgba(134, 119, 119, 0.23);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  width: 25rem;
+  height: 25rem;
+
+}
+.atividade4{
+  display: block;
+  background: rgba(134, 119, 119, 0.23);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  width: 1000px;
+  padding: 7px;
+  margin: 15px auto;
+}
+p,h1,li{
+  font-family: Lato, serif;
+  color: #ffffff;
+}
+p{
+  font-weight: bold;
+}
