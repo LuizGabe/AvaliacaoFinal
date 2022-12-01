@@ -38,7 +38,14 @@ function Home() {
       console.log(resultado.data);
     })
   }
+function excluir(id: number) {
+  console.log(id)
+  axios.delete(`http://localhost:3100/video/excluir/${id}`).then(resultado => {
+    console.log("deletado ")
+    buscarVideo()
+  })
 
+}
   return (
     <>
     <Link to='/adicionar'>Adicionar novo Vídeo</Link>
@@ -63,6 +70,8 @@ function Home() {
             encrypted-media; 
             gyroscope; picture-in-picture">
             </iframe>
+            <h2>{video.name}</h2>
+            <button type='button' onClick={() => excluir(video.id)}  id='voltar'>Excluir</button>
           </div>
           :
           <></>
@@ -72,6 +81,7 @@ function Home() {
     
     ))
     }
+     <Link to={'/adicionar'} id='voltar'> Adicionar Video </Link>
     </>
   );
 }

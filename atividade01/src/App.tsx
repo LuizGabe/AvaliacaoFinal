@@ -5,9 +5,9 @@ function App() {
 
     // Aqui fica a configuração de pessoas que fazem parte do grupo
     const pessoas = [
-        {nome:'Luiz Gabriel Grumicker Pereira', imgUrl: 'https://img.icons8.com/doodle/512/user.png'},
-        {nome:'Matheus Henrique da Rosa Foliatti', imgUrl: 'https://img.icons8.com/doodle/512/user.png'},
-        {nome:'Carlos Sadi Mucha Zomer', imgUrl: 'https://img.icons8.com/doodle/512/user.png'}
+        {nome:'Luiz Gabriel Grumicker Pereira', imgUrl: 'https://github.com/LuizGabe.png'},
+        {nome:'Matheus Henrique da Rosa Foliatti', imgUrl: 'https://pps.whatsapp.net/v/t61.24694-24/267151366_341398807321807_3616139534915186143_n.jpg?ccb=11-4&oh=01_AdQi2trhtivmsQAz_1QbSR1Winogs6ZDDIFkYqWBw1inQw&oe=63963C32'},
+        {nome:'Carlos Sadi Mucha Zomer', imgUrl: 'https://pps.whatsapp.net/v/t61.24694-24/166204119_1297907090985116_4128885010499393852_n.jpg?ccb=11-4&oh=01_AdQM5QByVyTl1fdGYhDvWxKNbmphhqTSVcnQmbptaCuBfg&oe=63965916'}
     ]
     return (
 
@@ -38,7 +38,7 @@ function App() {
         </section>
         <section className={"atividade4"}>
             <div>
-                <h1 id="texto" > Tarefa número 4 </h1>
+                <h1 id="texto" > Tarefa n° 4 </h1>
                 < p id = "texto" >
                     Criar uma página para controlar a lista de vídeos do youtube para
                     estudar: { " " }
