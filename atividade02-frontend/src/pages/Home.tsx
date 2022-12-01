@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import "./Home.css";
 
 interface videoInterface {
@@ -18,7 +19,6 @@ interface categoryInterface {
 function Home() {
 
   const [listaVideo, setListaVideo] = useState([]);
-
   const [listaCategory, setListaCategory] = useState([]);
 
   useEffect(() => {
@@ -41,6 +41,7 @@ function Home() {
 
   return (
     <>
+    <Link to='/adicionar'>Adicionar novo Vídeo</Link>
     {
     
      listaCategory.map((category: categoryInterface) => (
