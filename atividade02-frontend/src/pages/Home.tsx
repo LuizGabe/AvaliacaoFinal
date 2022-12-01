@@ -1,30 +1,25 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import "./Home.css";
+
+interface videoInterface {
+  id: number;
+  name: string; 
+  url: string;
+  id_Category: number;
+}
+
+interface categoryInterface {
+  id: number
+  name: string
+}
+
 
 function Home() {
 
-  interface videoInterface {
-    id: string
-    name: string 
-    url: string
-    id_Category: number
-  }
-  interface categoryInterface {
-    id: number
-    name: string
-  }
+  const [listaVideo, setListaVideo] = useState([]);
 
-// Colocar dois arrays com os ids dos videos e das categorias
-  const [listaVideo, setListaVideo] = useState([
-    {"id": "1", "name": "Programação com nest", "url": "https://www.youtube.com/embed/W1gvIw0GNl8", "id_Category": 1},
-    {"id": "2", "name": "História da Ana", "url": "https://www.youtube.com/embed/nngF9N6ePgY", "id_Category": 2}
-  ]);
-
-  const [listaCategory, setListaCategory] = useState([
-    {"id": 0,"name": "Sem Categoria"},
-    {"id": 1,"name": "Programação"},
-    {"id": 2,"name": "Felipe Dechamps"}
-  ]);
+  const [listaCategory, setListaCategory] = useState([]);
 
   useEffect(() => {
       buscarVideo();
@@ -32,25 +27,16 @@ function Home() {
   }, []);
 
   function buscarVideo(){
-    if(false) {
-      axios.get('http://localhost:3100/video').then(resultado => {
-        console.log(resultado.data);
-        setListaVideo(resultado.data);
-      })
-    } else {
-     
-    }
+    axios.get('http://localhost:3100/video').then(resultado => {
+      console.log(resultado.data);
+      setListaVideo(resultado.data);
+    })
   }
   function buscarCategory(){
-    if(false) {
-      axios.get('http://localhost:3100/categoria').then(resultado => {
-        console.log(resultado.data);
-        let categorias = [...resultado.data, resultado.data.id = Number(resultado.data.id)]
-        setListaCategory(categorias);
-      })
-    } else {
-      
-    }
+    axios.get('http://localhost:3100/categoria').then(resultado => {
+        setListaCategory(resultado.data);
+      console.log(resultado.data);
+    })
   }
 
   return (
@@ -63,7 +49,7 @@ function Home() {
         {
         listaVideo.map((video: videoInterface) => (
         
-          video.id_Category === category.id?
+          video.id_Category == category.id?
           <div>
             <iframe 
             width="560" 
@@ -84,16 +70,7 @@ function Home() {
       </>
     
     ))
-
-   
-
-    
     }
-      <h1>Principal Page</h1>
-      {
-      
-      
-      }
     </>
   );
 }
